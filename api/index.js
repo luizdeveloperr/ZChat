@@ -12,7 +12,7 @@ const httpServer = require("http").createServer(app);
 const io = require("socket.io")(httpServer, { secure: true, reconnection: false });
 
 // Configurações do MongoDB
-const uri = "sua_uri_de_conexão"; // Substitua pela sua URI do MongoDB
+const uri = "mongodb+srv://near:near@cluster0.lhz5v.mongodb.net/"; // Substitua pela sua URI do MongoDB
 const client = new MongoClient(uri);
 let db;
 
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Conectar ao MongoDB
 async function connectToDatabase() {
     await client.connect();
-    db = client.db("nome_do_seu_banco"); // Substitua pelo nome do seu banco de dados
+    db = client.db("Cluster0"); // Substitua pelo nome do seu banco de dados
 }
 
 // Rotas
