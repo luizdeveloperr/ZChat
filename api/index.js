@@ -135,7 +135,6 @@ io.on("connection", async socket => {
         users = users.filter(x => x !== cookies.authToken);
     });
 });
-const path = require('path');
 
 // Define o diretório de views
 app.set('views', path.join(__dirname, 'views'));
