@@ -115,4 +115,7 @@ io.on("connection", async socket => {
 
 
 
-httpServer.listen(3000);
+// Inicia o servidor
+httpServer.listen(process.env.PORT || 3000, () => {
+    console.log(`Servidor rodando na porta ${process.env.PORT || 3000}`);
+});
