@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<%- include("./partials/defaultmainhead.ejs") %>
+	</head>
+	<body>
+		<div id="loginContent">
+
+			<div id="step1" class="step">
+				<div class="stepcontent">
+				<h4 class="stepname">STEP 1</h4>
+				<h3 class="entry">
+					Let's get you started
+				</h3>
+				<a href="#step2"><button href="#step2">Next</button></a>
+				</div>
+			</div>
+			<div id="step2" class="step">
+				<div class="stepcontent">
+									<h4 class="stepname">STEP 2</h4>
+					
+				<h3 class="entry">
+					Enter an username
+				</h3>
+				<form method="post" action="/postUserData">
+				<input id="username" name="username" placeholder="Username" required maxlength="10">
+				<%- q?.err ? `<p style="color: red;">${q.err}</p>` : "" %>
+					<h3 class="entry">
+					Paste an image URL/BufferImage to be used as avatar
+				</h3>
+					<p class="small opaque">(ignore this if you are logging in)</p>
+					<input id="avatar" name="avatar" placeholder="Avatar Link">
+				<a href="#step3"><button href="#step3" type="button">Next</button></a>
+				</div>
+			</div>
+						<div id="step3" class="step">
+				<div class="stepcontent">
+									<h4 class="stepname">STEP 3</h4>
+					
+				<h3 class="entry">
+					Enter a password
+				</h3>
+				<input id="password" name="password" placeholder="Password" required maxlength="20">
+				<a href="#step4"><button href="#step4" type="button">Next</button></a>
+				</div>
+						</div>
+			<div id="step4" class="step">
+				<div class="stepcontent">
+									<h4 class="stepname">STEP 4</h4>
+				<h3 class="entry">
+					Done!
+				</h3>
+				<button type="submit">Next</button>
+			</form>
+			</div>
+		</div>
+	</div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script><%- include("scripts/main.js") %></script>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Welcome</title>
+		<meta name="viewport" content="width: device-width, initial-scale=1.0">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+		body {
+			color: #fafafa;
+			font-family: "Poppins", sans-serif;
+		display: flex;
+		justify-content: center;
+			align-items: center;
+			animation: gradient-animation 10s infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background: #3d3d3d;
+  }
+  50% {
+    background: #262626;
+  }
+  100% {
+    background: #404040;
+  }
+		}
+	</style>
+	</head>
+	<body>
+		<%- q.err %>
+	</body>
+</html>

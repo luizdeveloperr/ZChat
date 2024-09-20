@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<%- include("./partials/defaulthead.ejs") %>
+	</head>
+	<body>
+		<div class="mainContentHeader">
+			<div class="roomDetail">
+				<h3>Global</h3>
+			</div>
+			<div class="roomDescription">
+				<p class="small opaque">Default global room.</p>
+			</div>
+		</div>
+		<div id="chatArea">
+			
+		</div>
+		<p id="typingbar" class="small hidden"></p>
+		<p id="replybar" class="small hidden"></p>
+		<div id="textInputWrapper">
+			<div id="textInput">
+				<form id="textSubmitForm" onsubmit="return false">
+				<input id="textInputBox" placeholder="Enter some message" required autocomplete="off" type="">
+				<button id="textSumbitButton" type="submit"><i class="fas fa-paper-plane"></i></button>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.2/socket.io.js" integrity="sha512-jMNwWSmjje4fjYut9MBGKXw5FZA6D67NHAuC9szpjbbjg51KefquNfvn4DalCbGfkcv/jHsHnPo1o47+8u4biA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="
+https://cdn.jsdelivr.net/npm/short-unique-id@4.4.4/dist/short-unique-id.min.js
+"></script>
+	<script><%- include("scripts/index.js") %></script>
+</html>
