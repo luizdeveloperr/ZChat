@@ -137,8 +137,9 @@ io.on("connection", async socket => {
 });
 
 // Define o diretório de views
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '../views')); // Ajuste o caminho conforme necessário
 app.set('view engine', 'ejs');
+
 // Iniciar o servidor
 connectToDatabase()
     .then(() => {
