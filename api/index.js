@@ -12,7 +12,7 @@ const httpServer = require("http").createServer(app);
 const io = require("socket.io")(httpServer, { secure: true, reconnection: false });
 
 // Configurações do MongoDB
-const uri = "mongodb+srv://near:near@cluster0.lhz5v.mongodb.net/"; // Substitua pela sua URI do MongoDB
+const uri = process.env.MONGODB_URI; // Substitua pela sua variável de ambiente
 const client = new MongoClient(uri);
 let db;
 
